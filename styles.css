@@ -33,7 +33,7 @@
 
 body {
   /* 4. Add accessible line-height */
-  line-height: 1.5;
+  line-height: 1.3;
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
 }
@@ -73,12 +73,13 @@ h1, h2, h3, h4, h5, h6 {
     --accent-blue: rgb(23, 147, 212);
     --accent-yellow: rgb(241, 177, 52);
     --background-grey: rgb(225, 232, 239);
+    --grey-text: rgb(108, 108, 108);
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 4.5fr;
 }
 
 a {
@@ -205,8 +206,6 @@ input {
     font-weight: bold;
     font-size: 1.5rem;
     justify-self: left;
-    padding: 0;
-    margin: 0;
 }
 
 .user-greeting p:first-of-type {
@@ -215,12 +214,85 @@ input {
 
 .main-content {
     background-color: var(--background-grey);
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.main-content-heading {
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.projects {
+    grid-row: 1 / 3;
+    align-self: stretch;
+}
+
+.projects-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: stretch;
+    gap: 2rem 1.5rem;
+}
+
+.project-card,
+.announcements-card,
+.trending-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
 }
 
 .project-card {
-    background-color: white;
+    border-left: 10px solid var(--accent-yellow);
+    display: grid;
 }
 
 .project-icons {
     display: flex;
+    gap: 1rem;
+    justify-self: right;
+    align-self: end;
+    margin-top: 1rem;
+}
+
+.project-icons .icon {
+    height: 1.2em;
+}
+
+.project-card p,
+.announcements-card p,
+.announcements-card hr,
+.trending-card p {
+    color: var(--grey-text);
+}
+
+.announcements-card h4:not(:first-of-type) {
+    margin-top: 1rem;
+}
+
+.announcements-card hr {
+    margin: 1rem 0;
+}
+
+.trending-card {
+    display: grid;
+    gap: 1rem;
+}
+
+.trending-user {
+    display: grid;
+    grid-template-columns: 2.5em 1fr;
+    gap: 0 1rem;
+}
+
+.trending-user .user-icon {
+    height: 2.5em;
+}
+
+p.user-handle {
+    color: black;
 }
