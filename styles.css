@@ -86,6 +86,15 @@ a {
     text-decoration: none;
 }
 
+.icon {
+    height: 1em;
+}
+
+.user-icon {
+    height: 4em;
+    border-radius: 50%;
+}
+
 .sidebar {
     background-color: var(--accent-blue);
     color: white;
@@ -127,6 +136,83 @@ nav {
     margin-top: 30px;
 }
 
+/* .container {
+    padding: 1rem;
+} */
+
+header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    gap: 1rem 2rem;
+    padding: 1rem 2rem;
+}
+
+header form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .icon {
+    height: 1.5em;
+}
+
+input {
+    width: 100%;
+    border: none;
+    background-color: var(--background-grey);
+    border-radius: 20px;
+}
+
+.user-account {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-self: right;
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+.user-account .user-icon {
+    height: 2.5em;
+}
+
+.header-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-buttons button {
+    height: 2.5rem;
+    border: none;
+    background-color: var(--accent-blue);
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.user-greeting-box {
+    display: grid;
+    grid-template-columns: 4em 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-greeting p {
+    font-weight: bold;
+    font-size: 1.5rem;
+    justify-self: left;
+    padding: 0;
+    margin: 0;
+}
+
+.user-greeting p:first-of-type {
+    font-size: 0.8rem;
+}
+
 .main-content {
     background-color: var(--background-grey);
 }
@@ -137,8 +223,4 @@ nav {
 
 .project-icons {
     display: flex;
-}
-
-.icon {
-    height: 1em;
 }
