@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
     font-family: 'Roboto', sans-serif;
     display: grid;
-    grid-template-columns: 1fr 4.5fr;
+    grid-template-columns: minmax(230px, 1fr) 4.5fr;
 }
 
 a {
@@ -136,10 +136,6 @@ nav {
 .nav-item:nth-child(7) {
     margin-top: 30px;
 }
-
-/* .container {
-    padding: 1rem;
-} */
 
 header {
     display: grid;
@@ -223,8 +219,16 @@ input {
 }
 
 .main-content-heading {
+    align-self: end;
     margin-bottom: 0.8rem;
     font-size: 1.3rem;
+}
+
+.projects,
+.announcements,
+.trending {
+    display: grid;
+    grid-template-rows: 50px 1fr;
 }
 
 .projects {
